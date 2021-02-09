@@ -1,0 +1,225 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+   font-family: 'MapoFlowerIsland';
+}
+/* 바디 */
+form {
+   padding: 5% 10% 5% 10%;
+}
+
+h2 {
+   color: rgb(99, 99, 99);
+   font-size: 30px;
+}
+
+#title {
+   font-size: 20px;
+   margin-bottom: 5px;
+}
+
+#text {
+   width: 100%;
+   padding: 1%;
+}
+
+#sub {
+   font-size: 15px;
+   color: rgb(124, 124, 124);
+}
+
+select {
+   color: rgb(124, 124, 124);
+   width: 50%;
+   padding: 1%;
+}
+
+span {
+   float: left;
+   padding-bottom: 2%;
+}
+
+.rImg, .span1 {
+   width: 50%;
+}
+
+.house {
+   padding-top: 2%;
+   width: 100%;
+   float: left;
+}
+
+#imgBtn {
+   background-color: white;
+   border: 1px solid black;
+   padding: 5px 30px 5px 30px;
+   border-radius: 5px 5px 5px 5px;
+}
+
+#fileceo {
+   padding: 5px 5px 0 0;
+   width: 100%;
+}
+
+#sImgZip, #rImgZip, #aImgZip, #eImgZip {
+   /* width: 50%; */;
+   padding: 5px 5px 0 0;
+}
+
+#file, .addedP, .addedR, .addedA, .addedE, .addedS, .addedB{
+   border: 1px solid rgb(165, 165, 165);
+}
+
+#imgSection {
+   padding-top: 2%;
+}
+
+#ta {
+   width: 100%;
+}
+/* 방정보 
+#roomInfo1, #roomInfo2 {
+   width: auto;
+   height: 700px;
+}
+*/
+
+/* 버튼 +  X */
+#r_btn {
+   background-color: white;
+   border: 0px;
+   float: right;
+}
+
+#rx_btn {
+   border: 0px;
+   background-color: white;
+   float: right;
+}
+
+#r_btn:hover {
+   background-color: rgb(131, 131, 131);
+}
+
+#rx_btn:hover {
+   background-color: rgb(145, 0, 0);
+}
+
+#rp {
+   padding: 1%;
+}
+
+/* 사진 버튼  + -*/
+#img_btn {
+   background-color: white;
+   border: 0px;
+   padding: 0px;
+}
+
+#img_btn:hover {
+   background-color: rgb(187, 187, 187)
+}
+
+/* 시설 및 서비스 */
+.ss {
+   width: 30%;
+   margin-right: 3%;
+}
+/* 동그란 버튼 + - */
+.circleBtn {
+   float: right;
+}
+
+#cBtn {
+   background-color: white;
+   border: 0px;
+   padding: 0px;
+}
+
+/* 서비스 */
+#serText, .addedS .addedC, .addedP{
+   width: 100%;
+}
+
+#serviceP, #serviceC, #serviceS {
+   width: auto;
+   height: 150px;
+}
+
+/* 주소 */
+.add {
+   padding: 5px;
+}
+
+.spadd1 {
+   margin-top: 5%;
+   width: 60%;
+   margin: 0px;
+   padding: 0px;
+}
+
+.spadd2 {
+   width: 30%;
+   float: left;
+}
+
+.spadd2>img {
+   width: 500px;
+   height: 300px;
+}
+
+.postcodify {
+   width: 50%;
+   padding: 5px;
+}
+
+.postcode5 {
+   width: 84%;
+}
+
+#postcodify_search_button {
+   background-color: black;
+   color: white;
+   border: 0px;
+   padding: 5px 20px 5px 20px;
+   border-radius: 5px 5px 5px 5px;
+}
+
+/* 정보 */
+.i {
+   width: 30%;
+   margin-right: 3%;
+   height: 250px;
+   padding-top: 2%;
+}
+
+.squareBtn {
+   float: right;
+}
+
+#iBtn {
+   background-color: white;
+   border: 0px;
+   padding: 0px;
+}
+
+/* 제출하기 버튼 */
+#submitBtn {
+   width: 100%;
+   padding: 5px 20px 5px 20px;
+   border-radius: 5px 5px 5px 5px;
+   background-color: black;
+   color: white;
+}
+
+/* 수정하기 버튼 */
+.bUBtn{
+   border-radius: 5px 5px 5px 5px;
+   background-color: black;
+   color: white;
+}

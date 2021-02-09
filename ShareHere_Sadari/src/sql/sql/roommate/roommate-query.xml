@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="insertRoommateUser">
+		INSERT
+		INTO RM_INFO
+		(
+		  	US_NO
+		  , RM_RESULT
+		  , RM_LOCAL
+		  , RM_INTRO
+		  , RM_GENDER
+		  , LIVING_TYPE
+		  , LIVING_TERM
+		  , SNS_ADDRESS
+		  , MOVE_IN_DATE
+		  , AGE
+		)
+		VALUES
+		(
+		    ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		)
+	</entry>
+	
+	<entry key="selectRoommateUserList">
+		SELECT
+		  	US_NO
+		  , RM_RESULT
+		  , RM_LOCAL
+		  , RM_INTRO
+		  , RM_GENDER
+		  , LIVING_TYPE
+		  , LIVING_TERM
+		  , SNS_ADDRESS
+		  , MOVE_IN_DATE
+		  , AGE
+		FROM
+			  RM_INFO
+		WHERE
+			 RM_RESULT = ?
+	</entry>
+	
+	<entry key="selectRoommateUserOne">
+		SELECT
+				US_NO
+			  , RM_RESULT
+			  , RM_LOCAL
+			  , RM_INTRO
+			  , RM_GENDER
+			  , LIVING_TYPE
+			  , LIVING_TERM
+			  , SNS_ADDRESS
+			  , MOVE_IN_DATE
+			  , AGE
+		FROM
+			  RM_INFO
+		WHERE
+			  US_NO = ?	
+	</entry>
+	
+	<entry key="insertRoommateReport">
+		INSERT
+		INTO RM_REPORT
+		(
+			  US_REPORT_NUM
+			, RM_REPORT
+			, RM_REPORT_DATE
+			, US_NO2
+			, US_NO
+			, RM_REPORT_CONTENT
+			, RM_CHECK
+		)
+		VALUES
+		(
+		    RM_SEQ_NO.NEXTVAL
+		  , ?
+		  , SYSDATE
+		  , ?
+		  , ?
+		  , ?
+		  , 'W'
+		)
+	</entry>
+	
+	<entry key="insertRoommateKeepUser">
+		INSERT
+		INTO RM_JJIM
+		(
+		    US_NO
+		  , US_NO2
+		)
+		VALUES
+		(
+		    ?
+		  , ?
+		)
+	</entry>
+	
+	<entry key="getListCount">
+		SELECT COUNT(*)
+		FROM RM_INFO
+		WHERE US_NO = ?
+	</entry>
+	
+	<entry key="getPayChkeckListCount">
+		SELECT COUNT(*)
+		FROM RM_PAY
+		WHERE US_NO = ?
+	</entry>
+	
+	<entry key="insertRoommatePay">
+		INSERT
+		INTO RM_PAY
+		(
+		    PAY_NO
+		  , US_NO
+		  , PAY_ITEM
+		  , PRICE
+		  , PAY_DATE
+		  , EXPIRY_DATE
+		)
+		VALUES
+		(
+		    RM_PAY_SEQ_NO.NEXTVAL
+		  , ?
+		  , ?
+		  , ?
+		  , SYSDATE
+		  , SYSDATE + 14
+		)
+	</entry>
+	<entry key="selectRoommatePayOne">
+		SELECT
+			PAY_NO
+		  , US_NO
+		  , PAY_ITEM
+		  , PRICE
+		  , PAY_DATE
+		  , EXPIRY_DATE
+	FROM
+		  RM_PAY
+	WHERE
+		  US_NO = ?	
+	</entry>
+	<entry key="insertRoommateThumbnail">
+		INSERT
+		INTO RM_ATTA
+		(
+		    USER_NO
+		  , IMG_PATH
+		  , IMG_NAME
+		  , IMG_CHNAME
+		)
+		VALUES
+		(
+		    ?
+		  , ?
+		  , ?
+		  , ?
+		)
+	</entry>
+	
+	<entry key="selectRoommateAttachmentList">
+		SELECT
+			USER_NO
+		  , IMG_PATH
+		  , IMG_NAME
+		  , IMG_CHNAME
+	FROM
+		  RM_ATTA	
+	</entry>
+	
+	 <entry key = "commentList">
+      SELECT
+            NNO
+           , NTITLE
+           , NCONTENT
+           , NWRITER
+           , NCOUNT
+           , NDATE
+           , STATUS
+        FROM   
+               RM_COMMENT
+
+   </entry>
+   <entry key = "increaseCount">
+      UPDATE
+            RM_COMMENT
+         SET
+               NCOUNT = NCOUNT + 1
+       WHERE
+             NNO = ?
+         AND  STATUS = 'Y'      
+   </entry>
+   
+   <entry key = "selectComment">
+   SELECT
+             NNO
+            , NTITLE
+            , NCONTENT
+            , NWRITER
+            , NCOUNT
+            , NDATE
+            , STATUS
+        FROM
+              RM_COMMENT
+       WHERE    NNO = ?
+       AND    STATUS = 'Y'
+   </entry>
+   
+   <entry key = "deleteComment">
+      UPDATE
+               RM_COMMENT
+           SET
+                 STATUS = 'N'
+         WHERE
+               NNO = ?
+   </entry>
+
+   <entry key="insertComment">
+   INSERT
+      INTO RM_COMMENT
+      (
+           NNO
+         , NTITLE           
+         , NCONTENT
+         , NWRITER
+         , NCOUNT
+            , NDATE
+            , STATUS
+      )
+      VALUES
+      (
+          RM_SEQ_NO.NEXTVAL
+        , ?
+          , ?
+        , ?
+        , 1
+        , SYSDATE
+          , 'Y'
+      )
+   </entry>
+
+	<entry key="selectRoommateUserOneAtta">
+		SELECT
+			USER_NO
+		  , IMG_PATH
+		  , IMG_NAME
+		  , IMG_CHNAME
+	FROM
+		  RM_ATTA
+	WHERE
+		 USER_NO = ?	
+	</entry>
+	
+	<entry key="insertMatching">
+	INSERT
+		INTO RM_MATCH
+		(
+		    USER_NO
+		  , USER_NO2
+		  , TEL
+		  , TEXT
+		  , STATUS
+		)
+		VALUES
+		(
+		    ?
+		  , ?
+		  , ?
+		  , ?
+		  , 'N'
+		)
+	</entry>
+	
+	<entry key="selectReportListOne">
+	SELECT
+			US_REPORT_NUM
+		  , RM_REPORT
+		  , RM_REPORT_DATE
+		  , US_NO2
+		  , US_NO
+	FROM
+		  RM_REPORT
+	WHERE
+		 US_NO = ?
+	</entry>
+	
+	<entry key="selectRoommateJjimOne">
+	SELECT
+			US_NO
+		  , US_NO2
+	FROM
+		  RM_JJIM
+	WHERE
+		 US_NO = ?
+	</entry>
+	
+	<entry key="selectRoommatePayOne">
+	SELECT
+			PAY_NO
+		  , US_NO
+		  , PAY_ITEM
+		  , PRICE
+		  , PAY_DATE
+		  , EXPIRY_DATE
+	FROM
+		  RM_PAY
+	WHERE
+		 US_NO = ?
+	</entry>
+	
+	<entry key="selectRoommateMatchingOne"> <!-- 내가 매칭한 사람 -->
+	SELECT
+			USER_NO
+		  , USER_NO2
+		  , TEL
+		  , TEXT
+		  , STATUS
+	FROM
+		  RM_MATCH
+	WHERE
+		 USER_NO = ?
+	</entry>
+	
+	<entry key="selectRoommateMatchingIntoOne"> <!-- 내게 온 매칭 -->
+	SELECT
+			USER_NO
+		  , USER_NO2
+		  , TEL
+		  , TEXT
+		  , STATUS
+	FROM
+		  RM_MATCH
+	WHERE
+		 USER_NO2 = ?
+	</entry>
+	
+	<entry key="deleteMatching">
+	DELETE
+	FROM
+	RM_MATCH
+	WHERE		
+			USER_NO = ?
+		AND USER_NO2 = ?
+	</entry>
+	
+	<entry key="rejectMatching">
+	UPDATE RM_MATCH
+		SET STATUS = 'R'
+	WHERE STATUS = 'N'
+	AND USER_NO = ? <!-- 나한테 매칭 신청한 사람 -->
+	AND USER_NO2 = ? <!-- 나 -->
+	</entry>
+	
+	<entry key="allowMatching">
+	UPDATE RM_MATCH
+		SET STATUS = 'Y'
+	WHERE STATUS = 'N'
+	AND USER_NO = ? <!-- 나한테 매칭 신청한 사람 -->
+	AND USER_NO2 = ? <!-- 나 -->
+	</entry>
+	
+	<entry key="selectRoommateSuccessMatching">
+	SELECT
+			USER_NO
+		  , USER_NO2
+		  , TEL
+		  , TEXT
+		  , STATUS
+	FROM
+		  RM_MATCH
+	WHERE	
+		(USER_NO = ?
+	OR  USER_NO2 = ?)
+	AND STATUS = 'Y'
+	</entry>
+	
+	<entry key="deleteThumb">
+	  DELETE 
+		FROM  RM_ATTA
+		WHERE USER_NO = ?
+	</entry>
+	
+	<entry key="updateRoommateUserInfo">
+	UPDATE RM_INFO
+		   SET 
+		   RM_LOCAL = ?
+		 , RM_INTRO = ?
+		 , LIVING_TYPE = ?
+		 , LIVING_TERM = ?
+		 , SNS_ADDRESS = ?
+		 , MOVE_IN_DATE = ?
+		 , AGE = ?
+	WHERE 
+		   US_NO = ?
+	</entry>
+	
+	<entry key="getListKeepUserIdCheckCount">
+	SELECT COUNT(*)
+		FROM RM_JJIM
+		WHERE US_NO = ?
+	AND US_NO2 = ?
+	</entry>
+	
+	<entry key="insertReply">
+		INSERT 
+		INTO RM_REPLY
+		(
+			RM_REPLY_SEQ_NO
+	      , USER_NO <!-- 작성자 번호 -->
+	      , REF_BID
+		  , CONTENT
+		  , CREATE_DATE
+		  , USER_ID
+		)
+		VALUES
+		(
+			RM_REPLY_SEQ_NO.NEXTVAL
+		  , ?
+		  , ?
+		  , ?
+		  , SYSDATE
+		  , ?
+		)
+	</entry>
+	
+	<entry key="selectReplyList">
+		SELECT
+		        RM_REPLY_SEQ_NO
+		      , USER_NO <!-- 작성자 번호 -->
+		      , REF_BID
+			  , CONTENT
+			  , CREATE_DATE
+		      , USER_ID <!-- 작성자 아이디 -->
+  		  FROM 
+		       RM_REPLY
+		       JOIN USER_DB ON (USER_NO = US_NO)
+ 		 WHERE
+		       REF_BID = ?
+	  ORDER BY 
+        	   CREATE_DATE DESC
+	</entry>
+	
+	<entry key="deleteJjim">
+	DELETE
+	FROM
+	RM_JJIM
+	WHERE		
+			US_NO = ?
+		AND US_NO2 = ?
+	</entry>
+
+</properties>

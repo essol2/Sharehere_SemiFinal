@@ -1,0 +1,42 @@
+ShareHere from. SADARI
+- SemiFinal Project
+
+*Team. SADARI(사다리)
+
+ • Eunsol Lee(Leader)
+ • Sunghyun Go
+ • Jihye Sung
+ • Jaewoo Go
+ • Dayoon Chol
+ • Yeji Lee
+
+
+*Project. ShareHere
+🏡ShareHere, which was created to share the housing concerns of young people who are advancing for their dreams, 
+has a HOUSE function to find a share house that is suitable for me to the owners of the share house,
+ and to the young people who are looking for a share house. 
+ With the ROOMMATE function that finds a roommate that fits you well among all kinds of people, 
+ we want to listen to the concerns of various users at the forefront.  
+ 
+ *Functions
+  • 📝 Member : Login/Logout, Register, Find ID/PWD, Update member information  
+  • 🏠 House : Upload SareHouse, Searching, Report ShareHouse, Reservate viewing, Payment  
+  • 👫 Roommate : Understanding user's disposition through survey, Recommend roommate, Chat, Payment  
+  • 📋 Mypage : Checking services (viewing reservation, roommate, payment), Withdrawal  
+  • 📈 Administrator : Managing services (members, share houses, reports, income)  
+  
+  * Usig Tools
+  	• Eclips
+  	• VisualStudio Code
+  	• DataBase - Oracle
+  	• Server - Apatch Tomcat 8.5
+  	• Bootstrap, AJAX, API
+  	
+  * Using Language
+   • Java
+   • JavaScript
+   • Jquery
+   • html5, css3
+   • JSP, Servlet
+   • SQL
+   

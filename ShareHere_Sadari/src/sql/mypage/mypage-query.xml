@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<!-- // 호스트 결제 내역 확인 -->
+	<entry key="selectPay">
+		SELECT 
+	             SHP_NO
+	           , SH_ITEM
+	           , SH_PRICE
+	           , SH_PDATE
+	           , HST_NO
+	    FROM
+	          SH_PAY
+	    WHERE HST_NO = ?
+	</entry>
+	<!-- 게시글 총 갯수 구하기 -->
+	<entry key="getListCount">
+      SELECT
+            COUNT(*)
+        FROM
+              SH_PAY
+       WHERE HST_NO = ?
+   </entry>
+   <entry key="selectPayPaging">
+   SELECT   RNUM
+            , SHP_NO
+            , SH_ITEM
+            , SH_PRICE
+            , SH_PDATE
+            , HST_NO
+	FROM (SELECT ROWNUM RNUM, P.*
+	    FROM (SELECT 
+	                      SHP_NO
+	                    , SH_ITEM
+	                    , SH_PRICE
+	                    , SH_PDATE
+	                    , HST_NO
+	                FROM
+	                      SH_PAY
+	                WHERE HST_NO = ?
+	                ORDER BY SH_PDATE DESC) P)
+	WHERE RNUM BETWEEN ? AND ?
+   </entry>
+   <entry key="selectUserResPaging">
+		SELECT  RNUM
+                ,  SH_RVNO
+                , SH_RV_CHKRM
+                , SH_RV_PERIOD
+                , SH_RV_DATE
+                , US_NO
+                , SH_RV_TD
+                , SH_NO
+                , SH_RV_STATUS
+                , SH_RTYPE
+                , SH_GENDER
+                , SH_RAREA
+                , SH_DEPOSIT
+                , SH_ADMCOST
+                , SH_MONTHLY
+                , SH_RDATE
+                , SH_CAPACITY
+                , SH_RNAME
+	FROM (SELECT ROWNUM RNUM, RV.*
+	FROM(SELECT 
+	                  SH_RVNO
+	                , SH_RV_CHKRM
+	                , SH_RV_PERIOD
+	                , SH_RV_DATE
+	                , US_NO
+	                , SH_RV_TD
+	                , RE.SH_NO
+	                , SH_RV_STATUS
+	                , SH_RTYPE
+	                , SH_GENDER
+	                , SH_RAREA
+	                , SH_DEPOSIT
+	                , SH_ADMCOST
+	                , SH_MONTHLY
+	                , SH_RDATE
+	                , SH_CAPACITY
+	                , SH_RNAME
+	    FROM SH_RES RE
+	    JOIN SH_ROOM R ON(SH_RV_CHKRM = SH_RNO)
+	    WHERE SH_RV_STATUS = 'Y'
+	    AND US_NO = ?
+	    ORDER BY SH_RV_DATE DESC) RV)
+	    WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	<!-- US 예약 리스트 카운트 -->
+	<entry key="getUserResListCount">
+	SELECT
+            COUNT(*)
+        FROM
+              SH_RES
+       WHERE US_NO = ?
+	</entry>
+	<entry key="selectUserResDetail">
+	SELECT 
+		SH_RVNO
+		, SH_RV_CHKRM
+		, US_NO
+		, SH_NO
+		, SH_RV_STATUS
+		, SH_RNO
+		, SH_I
+		, SH_INAME
+		, SH_IPATH
+		, SH_ITYPE
+		, SH_CHNAME
+		, SH_TITLE
+		, SH_ADDRESS
+		, SH_LA
+		, SH_LO
+		, SH_STATUS
+		, H.HST_NO
+		, HST_NAME
+		, HST_EMAIL
+		, HST_PHONE
+		, HST_BSNO
+		, HST_BSNAME
+	FROM SH_RES
+	JOIN SH_ROOM USING(SH_NO)
+	JOIN SH_PHOTO USING(SH_NO)
+	JOIN SH_INFO I USING(SH_NO)
+	JOIN HST_DB H ON(I.HST_NO = H.HST_NO)
+	WHERE SH_PHOTO.SH_ITYPE = 'RI'
+	AND SH_RV_STATUS = 'Y'
+	AND HST_ACT = 'Y'
+	AND SH_STATUS = 'Y'
+	AND SH_RVNO = ?
+	</entry>
+	<entry key ="selectHstResPaging">
+	SELECT RNUM
+            , US_NAME
+            , US_EMAIL
+            , US_PHONE
+            , US_ACT
+            , SH_RV_CHKRM
+            , SH_RV_PERIOD
+            , SH_RV_DATE
+            , SH_NO
+            , SH_RV_STATUS
+            , US_NO
+            , SH_RV_TD
+            , HST_NO
+	FROM (SELECT ROWNUM RNUM, RV.*        
+	FROM (SELECT 
+	          US_NAME
+	        , US_EMAIL
+	        , US_PHONE
+	        , US_ACT
+	        , SH_RV_CHKRM
+	        , SH_RV_PERIOD
+	        , SH_RV_DATE
+	        , SH_NO
+	        , SH_RV_STATUS
+	        , UD.US_NO
+	        , SH_RV_TD
+	        , HST_NO
+	FROM (
+         SELECT SH_RVNO
+        , SH_RV_CHKRM
+        , SH_RV_PERIOD
+        , SH_RV_DATE
+        , RE.SH_NO
+        , SH_RV_STATUS
+        , RE.US_NO
+        , SH_RV_TD
+        , I.HST_NO
+        FROM SH_RES RE
+        JOIN SH_INFO I ON (I.SH_NO = RE.SH_NO)
+    ) F
+	JOIN USER_DB UD ON (F.US_NO = UD.US_NO)
+	WHERE HST_NO = ?
+	AND US_ACT = 'Y'
+	AND SH_RV_STATUS = 'Y'
+	ORDER BY SH_RV_DATE DESC) RV)
+	WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	<!-- 호스트 유저 갯수 -->
+	<entry key="getHstResListCount">
+	SELECT
+            COUNT(*)
+        FROM
+              SH_RES RE
+        JOIN SH_INFO I ON(RE.SH_NO =I.SH_NO)
+       WHERE HST_NO = ?
+	</entry>
+	<!-- User 예약 취소 -->
+	<entry key="deleteUsRes">
+	UPDATE
+            SH_RES
+     SET 
+               SH_RV_STATUS = 'N'
+     WHERE
+             SH_RVNO = ?
+	</entry>
+	<!-- 오늘 예약 건인지 alert -->
+	<entry key="selectShAlerResToday">
+	SELECT 
+			SH_RVNO
+			, SH_RV_CHKRM
+			, SH_RV_PERIOD
+			, SH_RV_DATE
+			, RE.US_NO
+			, RE.SH_NO
+			, SH_RV_STATUS
+			, SH_RV_TD
+			, US_NAME
+			FROM SH_RES RE
+			JOIN USER_DB U ON(RE.US_NO = U.US_NO)
+			JOIN SH_INFO I ON(RE.SH_NO = I.SH_NO)
+	WHERE HST_NO = ?
+	</entry>
+</properties>

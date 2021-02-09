@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+   font-family: 'MapoFlowerIsland';
+}
+
+body{
+    margin: 0;
+		    padding: 0;
+		    background-image: url('${pageContext.request.contextPath}/views/admin/adm_img/SG-12_V1CIhTA.jpg');
+	        background-repeat: no-repeat;
+	        background-size:1170px 690px;
+	        font-family: 'Nanum Gothic', sans-serif;
+}
+
+#menuImg{
+	border : 1px solid gray;
+    float : left;
+    width: 400px;
+    height: 768px;
+    position: relative;
+    opacity : 100%;
+}
+
+.menuBtn{
+    background-color: black;
+    color:white;
+    width: 100px;
+    height : 50px;
+    margin:30px;
+    opacity: 60%;
+    font-size: medium;
+    border : none;
+    width : 250px;
+    height: 60px;
+    cursor:pointer;
+    outline:none;
+}
+
+.menuBtn:hover{
+    opacity: 100%;
+}
+
+#adminLogo{
+    /*border : 1px solid red;*/
+    width : 150px;
+    position : absolute;
+    top : 50px;
+    left : 130px;
+}
+
+#title_Btns{
+    /*border : 1px solid blue;*/
+    position: absolute;
+    top : 280px;
+    left : 3px;
+}
+
+h1{
+    color : black;
+    width : 400px;
+    text-align: center;
+    font-size: 80px;
+    position: absolute;
+    top : 90px;
+    /*border : 1px solid orange;*/
+}
+
+#btnList{
+    list-style: none;
+    text-align: left;
+    margin-top : 10px;
+    
+}
+#btnList li{
+    /*border : 1px solid white;*/
+    margin-right: 40px;
+    height : 80px;
+}

@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="selectOutList">
+		SELECT 
+				US_NO
+			  , US_ID
+			  , US_NAME
+			  , US_EMAIL
+			  , US_ACT
+			  , US_STOP
+			  , HST_NO
+			  , HST_ID
+			  , HST_NAME
+			  , HST_EMAIL
+			  , HST_ACT
+			  , HST_STOP
+			  
+		FROM 
+				V1
+		WHERE 
+				US_ACT = 'N'
+		OR 
+				US_ACT = 'B'
+		OR 
+				HST_ACT = 'N'
+		OR 
+				HST_ACT = 'B'
+		ORDER BY 
+				US_STOP DESC
+			  , HST_STOP DESC
+	</entry>
+	<entry key="selectDelList">
+		 SELECT
+	 		SH_NO
+	 	  , SH_TITLE
+	 	  , SH_DATE
+	 	  , SH_DELDATE
+	 	  , SH_STATUS
+	 	  , HST_NO
+	 	 FROM
+	 	 	SH_INFO
+	 	 WHERE
+	 	 	SH_STATUS = 'N'
+	 	 OR
+	 	 	SH_STATUS = 'B'
+	 	 ORDER BY
+	 	 	SH_NO DESC
+	</entry>
+	
+	<entry key="comebackHost">
+	UPDATE 
+			HST_DB
+	SET
+			HST_ACT = 'Y'
+	WHERE
+			HST_NO = ?
+	</entry>
+	
+	<entry key="comebackUser">
+	UPDATE 
+			USER_DB
+	SET
+			US_ACT = 'Y'
+	WHERE
+			US_NO = ?
+	</entry>
+	
+	<entry key="comebackSH">
+	UPDATE 
+			SH_INFO
+	SET
+			SH_STATUS = 'Y'
+	WHERE
+			SH_NO = ?
+	</entry>
+	
+	<entry key="getUserListCount">
+		SELECT
+		       COUNT(*)
+		 FROM
+		       USER_DB
+		 WHERE
+			   US_ACT = 'Y'
+	</entry>
+	
+	<entry key="selectUserListCount">
+		  SELECT RNUM, US_NO, US_NAME, US_ID, US_BIRTH, US_EMAIL
+	
+		  FROM
+		       ULIST
+		  WHERE
+		       RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="getHstListCount">
+		
+		SELECT
+		       COUNT(*)
+		 FROM
+		       SH_INFO
+		 WHERE
+			   SH_STATUS = 'Y'
+	</entry>
+	
+	<entry key="selectHstListCount">
+		  SELECT 
+				RNUM, HST_NO, HST_NAME, HST_ID, HST_BSNO, HST_BSNAME
+	
+		  FROM
+		       HSTLIST
+		  WHERE
+		       RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="getOutListCount">
+		
+		SELECT
+		       COUNT(*)
+		 FROM
+		       V1
+		 WHERE
+			   US_ACT = 'N'
+		 OR
+		 		US_ACT = 'B'
+		 OR
+		 		HST_ACT = 'N'
+		 OR 
+		 		HST_ACT = 'B'
+	</entry>
+	
+	<entry key="selectOutListCount">
+		  SELECT 
+				RNUM, US_NO, US_ID, US_NAME, US_EMAIL, US_ACT, US_STOP, HST_NO, HST_ID, HST_NAME, HST_EMAIL, HST_ACT, HST_STOP
+	
+		  FROM
+		       OLIST
+		  WHERE
+		       RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="getShListCount">
+		SELECT COUNT(*)
+		FROM 
+			SH_INFO
+		WHERE 
+			SH_STATUS = 'Y'
+	</entry>
+	
+	<entry key="selectShListCount">
+		SELECT
+			RNUM, SH_NO, SH_DATE, SH_TITLE, HST_NO
+		FROM
+			SHLIST3
+		WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="getDSListCount">
+		SELECT COUNT(*)
+		FROM 
+			SH_INFO
+		WHERE 
+			SH_STATUS = 'N'
+		OR
+			SH_STATUS = 'B'
+	</entry>
+	
+	<entry key="selectDSListCount">
+		SELECT
+			RNUM, SH_NO, SH_TITLE, SH_STATUS, SH_DATE, SH_DELDATE, HST_NO
+		FROM
+			DSLIST
+		WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="getRmListCount">
+		SELECT 
+			COUNT(*)
+		FROM 
+			RM_PAY
+	</entry>
+	
+	<entry key="selectRmListCount">
+		SELECT
+			RNUM, PAY_NO, US_NO, PAY_ITEM, PAY_DATE
+		FROM
+			RMLIST
+		WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="getIsListCount">
+		SELECT 
+			COUNT(*)
+		FROM 
+			SH_PAY
+	</entry>
+	
+	<entry key="selectIsListCount">
+		SELECT
+			RNUM, SHP_NO, SH_ITEM, SH_PDATE, HST_NO
+		FROM
+			ISLIST
+		WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="getRRListCount">
+		SELECT 
+			COUNT(*)
+		FROM 
+			RM_REPORT
+	</entry>
+	
+	<entry key="selectRRListCount">
+		SELECT
+			  RNUM
+			, US_REPORT_NUM
+			, RM_REPORT
+			, RM_REPORT_DATE
+			, RM_REPORT_CONTENT
+			, US_NO2
+			, US_NO
+		FROM
+			(
+                SELECT ROWNUM RNUM, A.*
+                FROM (SELECT RR.US_REPORT_NUM, RR.RM_REPORT, RR.RM_REPORT_DATE, RR.US_NO2, RR.US_NO, RR.RM_CHECK, UD.US_ACT, RR.RM_REPORT_CONTENT
+                      FROM RM_REPORT RR
+                      LEFT JOIN USER_DB UD ON(RR.US_NO2 = UD.US_NO)) A
+            )
+		WHERE 
+			RM_CHECK = 'W'
+		AND
+			US_ACT = 'Y'
+		AND
+			RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="getSRListCount">
+		SELECT 
+			COUNT(*)
+		FROM 
+			SH_REPORT
+	</entry>
+
+	<entry key="selectSRListCount">
+		SELECT RNUM, SH_REPORTNUM, SH_REASON, SH_CONTENT, SH_REPORT_DATE, US_NO, SH_NO, SH_CHECK, SH_STATUS
+		FROM (SELECT ROWNUM RNUM, A.*
+		      FROM (SELECT SH_REPORTNUM, SH_REASON, SH_CONTENT, SH_REPORT_DATE, US_NO, SR.SH_NO, SH_CHECK, SI.SH_STATUS
+		            FROM SH_REPORT SR
+		            LEFT JOIN SH_INFO SI ON(SR.SH_NO = SI.SH_NO)
+		            WHERE SH_CHECK = 'W'
+		            AND SH_STATUS = 'Y')A)
+		WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="selectShareHouse">
+		SELECT
+		       SH_NO
+		     , SH_TITLE
+		     , SH_TYPE
+		     , SH_INTRO
+		     , SH_ADDRESS
+		     , SH_STATUS
+		     , SH_DATE
+		     , SH_DELDATE
+		     , HST_NO
+		  FROM
+		       SH_INFO
+		 WHERE
+		       SH_NO = ?
+		   AND SH_STATUS = 'Y'
+	</entry>
+	
+	<entry key="selectUserMem">
+		SELECT
+		       US_NO
+		     , US_ID
+		     , US_NAME
+		     , US_BIRTH
+		     , US_GENDER
+		     , US_EMAIL
+		     , US_PHONE
+		     , US_ACT
+		  FROM
+		       USER_DB
+		 WHERE
+		       US_NO = ?
+		   AND US_ACT = 'Y'
+	</entry>
+	
+	<entry key="selectHostMem">
+		SELECT
+		       HST_NO
+		     , HST_ID
+		     , HST_NAME
+		     , HST_BIRTH
+		     , HST_GENDER
+		     , HST_EMAIL
+		     , HST_PHONE
+		     , HST_BSNO
+		     , HST_BSNAME
+		     , HST_ACT
+		  FROM
+		       HST_DB
+		 WHERE
+		       HST_NO = ?
+		   AND HST_ACT = 'Y'
+	</entry>
+	
+	<entry key="updateCheck">
+		UPDATE 
+			RM_REPORT
+		SET
+			RM_CHECK = 'N'
+		WHERE
+			US_REPORT_NUM = ?
+	</entry>
+	
+	<entry key="updateCheckSH">
+		UPDATE 
+			SH_REPORT
+		SET
+			SH_CHECK = 'N'
+		WHERE
+			SH_REPORTNUM = ?
+	</entry>
+	
+	<entry key="selectRrAlertMem">
+		SELECT 
+			  US_REPORT_NUM
+			, RM_REPORT
+			, RM_REPORT_DATE
+			, RM_REPORT_CONTENT
+			, US_NO2
+			, US_NO
+		FROM 
+			  RM_REPORT
+	    WHERE 
+	    	  US_NO2 = ?
+	    AND 
+	    	  RM_CHECK = 'N'
+	</entry>
+	
+	<entry key="selectShAlertMem">
+		SELECT 
+			  SH_REPORTNUM
+			, SH_REASON
+			, SH_CONTENT
+			, SH_REPORT_DATE
+			, US_NO
+			, SH_NO
+		FROM 
+			(
+				SELECT SR.SH_REPORTNUM, SR.SH_REASON, SR.SH_CONTENT, SR.SH_REPORT_DATE, SR.US_NO, SR.SH_NO, SI.HST_NO, SI.SH_STATUS, SR.SH_CHECK
+				FROM SH_REPORT SR
+				LEFT JOIN SH_INFO SI ON (SR.SH_NO=SI.SH_NO)
+			)
+			
+			  
+	    WHERE 
+	    	  HST_NO = ?
+	    AND 
+	    	  SH_CHECK = 'N'
+	</entry>
+	
+	<entry key="updateRmCheckClose">
+			UPDATE 
+					RM_REPORT
+			SET
+					RM_CHECK = 'Y'
+			WHERE
+					US_NO2 = ?
+	</entry>
+	
+	<entry key="paymentByMonthRM">
+		SELECT
+				PAY_NO
+			  , US_NO
+			  , PAY_ITEM
+			  , PRICE
+			  , PAY_DATE
+		FROM 	
+				RM_PAY
+		WHERE
+				TO_CHAR(PAY_DATE,'MM')=?
+				
+	</entry>
+	
+	<entry key="paymentByMonthSH">
+		SELECT
+				SHP_NO
+			  , SH_ITEM
+			  , SH_PRICE
+			  , SH_PDATE
+			  , HST_NO
+		FROM 	
+				SH_PAY
+		WHERE
+				TO_CHAR(SH_PDATE,'MM')=?
+	</entry>
+	
+	<entry key="insertRMLastIncome">
+		INSERT
+		INTO RM_INCOME
+		(
+			THIS_MONTH
+		  , HOWMUCH
+		)
+		VALUES
+		(
+			? || '.' || ?
+		  , ?
+		) 
+	</entry>
+	
+	<entry key="insertSHLastIncome">
+		INSERT
+		INTO SH_INCOME
+		(
+			THIS_MONTH
+		  , HOWMUCH
+		)
+		VALUES
+		(
+			? || '.' || ?
+		  , ?
+		) 
+	</entry>
+	
+	<entry key="selectRMIncomes">
+		SELECT 
+				THIS_MONTH
+			  , HOWMUCH
+		FROM 
+				RM_INCOME
+		ORDER BY
+				THIS_MONTH DESC
+	</entry>
+	
+	<entry key="selectSHIncomes">
+		SELECT 
+				THIS_MONTH
+			  , HOWMUCH
+		FROM 
+				SH_INCOME
+		ORDER BY
+				THIS_MONTH DESC
+	</entry>
+
+	<entry key="removeUser">
+		UPDATE 
+				USER_DB
+		SET
+				US_ACT = 'B'
+		WHERE
+				US_NO = ?
+	</entry>
+	
+	<entry key="removeSH">
+		UPDATE
+			SH_INFO
+		SET
+			SH_STATUS = 'B'
+		WHERE
+			SH_NO = ?
+		
+	</entry>
+	
+	<entry key="countNewShDaily">
+		SELECT
+				COUNT(*)
+		FROM 
+				SH_INFO
+		WHERE 
+				TO_CHAR(SH_DATE)=?		
+	</entry>
+	
+	<entry key="countNewShMonthly">
+		SELECT
+				COUNT(*)
+		FROM 
+				SH_INFO
+		WHERE 
+				TO_CHAR(SH_DATE,'YYMM')=?		
+	</entry>
+	
+	<entry key="countNewShLastMonth">
+		SELECT
+				COUNT(*)
+		FROM 
+				SH_INFO
+		WHERE 
+				TO_CHAR(SH_DATE,'YYMM')=?		
+	</entry>
+	
+	<entry key="insertLastMonthNewSh">
+		Insert 
+		INTO SH_NEW
+		(
+			THIS_MONTH
+		  , HOWMANY
+		)
+		VALUES
+		(
+			?
+		  , ?
+		)
+	</entry>
+	
+	<entry key="selectLastNewSh">
+		SELECT 
+			THIS_MONTH
+		  , HOWMANY
+		 FROM 
+		 	SH_NEW
+	</entry>
+	
+	<entry key="deleteSHConfirm">
+			UPDATE 
+					SH_INFO
+			SET
+					SH_STATUS = 'B'
+					
+			WHERE
+					SH_NO = ?
+	</entry>
+	
+	<entry key="getPayListCount">
+	SELECT 
+		PAY_NO
+	  , US_NO
+	  , PAY_ITEM
+	  , PRICE
+	  , PAY_DATE
+	  , EXPIRY_DATE
+	FROM 
+		RM_PAY
+	WHERE 
+		US_NO = ?
+	</entry>
+	
+	<entry key="selectpaylist">
+	SELECT RNUM
+      , PAY_NO
+	  , US_NO
+	  , PAY_ITEM
+	  , PRICE
+	  , PAY_DATE
+	  , EXPIRY_DATE
+	 FROM(SELECT ROWNUM RNUM, A.*
+    	  FROM (SELECT 
+    	  				PAY_NO
+	                  , US_NO
+	                  , PAY_ITEM
+	                  , PRICE
+	                  , PAY_DATE
+	                  , EXPIRY_DATE
+          		 FROM RM_PAY
+	             WHERE US_NO = ?
+	             ORDER BY PAY_DATE DESC) A) 
+	 WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<entry key="getHsyPayListCount">
+	SELECT 
+		SHP_NO
+	  , SH_ITEM
+	  , SH_PRICE
+	  , SH_PDATE
+	  , HST_NO
+	FROM 
+		SH_PAY
+	WHERE 
+		HST_NO = ?
+	</entry>
+	<entry key="selectHostPaylist">
+	SELECT RNUM
+        SHP_NO
+	  , SH_ITEM
+	  , SH_PRICE
+	  , SH_PDATE
+	  , HST_NO
+	 FROM(SELECT ROWNUM RNUM, A.*
+    	  FROM (SELECT 
+	                  , SHP_NO
+					  , SH_ITEM
+					  , SH_PRICE
+					  , SH_PDATE
+					  , HST_NO
+          		 FROM SH_PAY
+	             WHERE HST_NO = ?
+	             ORDER BY SH_PDATE DESC) A) 
+	 WHERE RNUM BETWEEN ? AND ?
+	</entry>
+
+	
+</properties>

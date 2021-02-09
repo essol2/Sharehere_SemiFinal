@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+   font-family: 'MapoFlowerIsland';
+}
+
+body{
+    margin:0;
+} 
+
+/* navigation */
+a{
+    text-decoration : none;
+    color : black;
+}
+.navibar{
+    display : flex;
+    justify-content: space-between ;
+    align-items: center;
+    padding : 8px 12px;
+}
+
+.nav_logo{
+    width:auto;
+    height:100%;
+    margin-right : 4%;
+}
+
+.nav_menu{
+    display : flex;
+    list-style: none;
+    padding-left: 2%;
+    width: 40%;
+    font-size: 100%;
+}
+
+.nav_menu li {
+    padding : 8px 12px;
+    cursor:pointer;
+}
+
+.nav_menu li:hover{
+    /*color : navy;*/
+    color: rgb(175, 29, 29);
+}
+
+.nav_buttons{
+    list-style: none;
+    width:40%;
+    overflow: auto;
+    
+/*     추가 */
+/*     display: flex; */
+/*     padding-left: 2%; */
+/*     width: 40%; */
+/*     font-size: 100%; */
+}
+
+.nav_buttons li{
+    padding : 5px 8px;
+    display : flex;
+    justify-content: flex-end;
+    float : right;
+}
+
+#lgBtn, #reBtn, #outBtn, #mypageBtn{
+    background-color: black;
+    color : white;
+    border-radius : 7px;
+    font-size:medium;
+    width: 130px;
+    height : 130%;
+    border-style:none;
+}
+/* 버튼클래스, 통합css */
+.shBtn{
+	background-color: black;
+    color : white;
+    border-radius : 7px;
+    font-size:medium;
+    width: 130px;
+    height : 130%;
+    border-style:none;
+}
+.shBtn:hover{
+	border: 1px solid black;
+    background-color: white;
+    color : black;
+}
+
+#lgBtn:hover{
+	border: 1px solid black;
+    background-color: white;
+    color : black;
+}
+
+#reBtn:hover{
+    background-color: white;
+    color : black;
+}
+
+#outBtn:hover{
+    background-color: white;
+    color : black;
+}
+#mypageBtn:hover{
+    background-color: white;
+    color : black;
+}
+#userType, #hostType{
+    background-color: black;
+    color : white;
+    border-radius : 7px;
+    font-size:medium;
+    width: 100px;
+    height : 130%;
+    border-style:none;
+}
+#userType:hover{
+    background-color: white;
+    color : black;
+}
+#hostType:hover{
+    background-color: white;
+    color : black;
+}
+
+.navibar_toggleBtn{
+    position: absolute;
+    right : 8%;
+    display : none;
+}
+
+
+ /* footer */
+ footer {
+    margin-top: 3%;
+    text-align: center;
+ }
+
+    #icons{
+        margin: 0.5%;
+        width: 100%; height: auto;
+    }
+
+    #icons>img{
+        width : 3%;
+    }
+
+    #footer_text{
+        font-size: 3%;
+    }
+    
+    #logoWrap{
+    	height : auto;
+    }
+    
+    #logo_footer{
+    	margin-left : 40%;
+    	margin-right : 40%;
+    }
+
+@media screen and (max-width : 900px){
+    #lgBtn, #reBtn{
+        background-color: black;
+        color : white;
+        border-radius : 7px;
+        font-size: medium;
+        width: 100px;
+        height : 130%;
+    }
+}
+
+@media screen and (max-width : 730px){
+
+    
+    .navibar{
+        flex-direction: column;
+        padding: 8px 24px;
+    }
+
+    .nav_menu{
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        align-items: left;
+        margin-bottom: 0;
+        margin-top : 7%;
+        margin-right : 0%;
+        text-align: left;
+    }
+
+    .nav_menu li:hover{
+        background-color: black;
+        color : white;
+    }
+
+    .nav_logo{
+        align-items: center;
+        margin-bottom: 3%;
+        width : auto;
+        height : 100%;
+        display:block;
+    }
+
+    .nav_buttons{
+        display : none;
+        margin-top : 0%;
+        margin-right : 3%;
+        margin-left : 3%;
+        list-style: none;
+        width:100%;
+        overflow: auto;
+    }
+    
+    .nav_buttons li{
+        padding : 5px 8px;
+        display : flex;
+        justify-content: center;
+        float : right;
+    }
+
+    #lgBtn, #reBtn{
+        background-color: black;
+        color : white;
+        border-radius : 7px;
+        font-size: medium;
+        width: 100px;
+        height : 130%;
+    }
+
+    .navibar_toggleBtn{
+        display:block;
+    }
+
+    .nav_menu.active, .nav_buttons.active, line.actice{
+        display: block;
+    }
+
+    .nav_logo.change{
+        display: none;
+    }
+
+}
+
+

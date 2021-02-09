@@ -1,0 +1,130 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+	font-family: 'MapoFlowerIsland';
+}
+#detail {
+	padding: 5% 10% 5% 10%;
+}
+
+.w1 {
+	float: left;
+}
+
+.house {
+	padding-top: 2%;
+	width: 100%;
+}
+/* 이미지 버튼 */
+.imgBtn {
+	background-color: white;
+	border: 1px solid black;
+	padding: 10px 50px 10px 50px;
+	border-radius: 5px 5px 5px 5px;
+	margin-right: 1%;
+	font-size: 15px;
+}
+
+.ceo {
+	background-color: black;
+	color: white;
+}
+
+/* 캐러셀 슬라이드 */
+#carouselExampleDark {
+	padding-top: 2%;
+}
+
+.carousel-inner>.carousel-item>img {
+	width: 640px;
+	height: 700px;
+}
+
+/* 매물 신고하기 */
+#siren {
+	border: 0px;
+	border-radius: 30%;
+	background-color: white;
+	padding: 40%;
+}
+
+#siren:hover {
+	background-color: rgb(172, 0, 0);
+}
+
+/* 예약하기 버튼 */
+#reserva {
+	float: right;
+	padding-right: 2%;
+}
+
+#reserBtn {
+	background-color: black;
+	color: white;
+	border: 1px solid black;
+	padding: 10px 50px 10px 50px;
+	border-radius: 5px 5px 5px 5px;
+	font-size: 15px
+}
+
+/* 하우스 메뉴바 */
+#hs_navi {
+	margin-top: 1%;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	width: 100%;
+	float: left;
+}
+
+#hs_navi>ul {
+	list-style: none;
+}
+
+#hs_navi>ul>li {
+	float: left;
+	padding: 1% 8% 1% 5%;
+	text-align: center;
+	font-size: 16px;
+}
+#hs_navi>ul>li:hover{
+	color: red;
+}
+/* 하우스 소개 */
+#htypeTB{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 90px;
+}
+#htypeTB td{
+    color: rgb(92, 91, 91);
+}
+/* 줄 hr */
+hr {
+	border: 1px solid darkgray;
+}
+
+/* 하우스 인사말 */
+.intro{
+    padding: 0px;
+}
+.intro > pre {
+	font-size: 15px;
+    text-align: left;
+    margin:  0px;
+}
+
+/* 시설 및 서비스 */
+.ss td{
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+.ss li{
+    list-style:none;
+}
+

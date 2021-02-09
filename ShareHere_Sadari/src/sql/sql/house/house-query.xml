@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<!-- YJ -->
+	<!-- 매물등록 info -->
+	<entry key="insertInfo">
+	INSERT 
+		INTO SH_INFO
+		(
+			SH_NO
+		  , SH_TITLE
+		  , SH_TYPE
+		  , SH_STR
+		  , SH_AREA
+		  , SH_FLOOR
+		  , SH_INTRO
+		  , SH_PERS
+		  , SH_COMS
+		  , SH_SS
+		  , SH_ADDRESS
+		  , SH_LA
+		  , SH_LO
+		  , SH_BANK
+		  , SH_MART
+		  , SH_PARMACY
+		  , SH_SUBWAY
+		  , SH_CAFE
+		  , SH_STORE
+		  , SH_STATUS
+          , SH_DATE
+          , SH_DELDATE
+          , HST_NO
+		)
+		VALUES
+		(
+			'SH' || SH.nextval
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+          , ?
+		  , ?
+          , ?
+		  , ?
+		  , ?
+		  , DEFAULT
+          , SYSDATE
+          , (select add_months(SYSDATE, 6) from dual)
+          , ?
+		)
+	</entry>
+	<!-- 매물 등록 photo -->
+	<entry key="insertPhoto">
+	INSERT 
+		INTO SH_PHOTO
+		(
+			  SH_I
+			, SH_INAME
+			, SH_IPATH
+			, SH_NO
+			, SH_ITYPE
+			, SH_CHNAME
+		
+		)VALUES(
+			'SHIMG' || SHIMG.nextval
+			, ?
+			, ?
+			, 'SH' || SH.CURRVAL
+			, ?
+			, ?
+		)
+	</entry>
+	<!-- 매물 등록 Room -->
+	<entry key="insertRoom">
+	    INSERT
+		INTO SH_ROOM
+        (
+              SH_RNO
+            , SH_RTYPE
+            , SH_GENDER
+            , SH_RAREA
+            , SH_DEPOSIT
+            , SH_ADMCOST
+            , SH_MONTHLY
+            , SH_RDATE
+            , SH_CAPACITY
+            , SH_RNAME
+            , SH_NO
+        )
+        VALUES
+        (   'SHR' || SHROOM.nextval
+          , ?
+          , ?
+          , ?
+          , ?
+          , ?
+          , ?
+          , ?
+          , ?
+          , ?
+          , 'SH' || SH.CURRVAL
+        )
+	</entry>
+	<!-- House 확인 조회 -->
+	<entry key="selectInfo">
+	SELECT 
+              SH_NO
+            , SH_TITLE
+            , SH_TYPE
+            , SH_STR
+            , SH_AREA
+            , SH_ADDRESS
+            , SH_DATE
+            , HST_NO
+	FROM
+            SH_INFO
+	WHERE
+            SH_STATUS = 'Y'
+    AND HST_NO = ?
+    ORDER BY SH_NO ASC
+	</entry>
+	<!-- 삭제하기 House 확인 -->
+	<entry key="deleteInfo">
+	 UPDATE
+            SH_INFO
+     SET 
+               SH_STATUS = 'N'
+             , SH_DELDATE = SYSDATE
+     WHERE
+             SH_NO = ?
+	</entry>
+	<!-- 수정하기 매물  select -->
+	<entry key="selectUpdateInfo">
+	SELECT 
+			  SH_NO
+            , SH_TITLE
+            , SH_TYPE
+            , SH_STR
+            , SH_AREA
+            , SH_FLOOR
+            , SH_INTRO
+            , SH_PERS
+            , SH_COMS
+            , SH_SS
+            , SH_ADDRESS
+            , SH_LA
+            , SH_LO
+            , SH_BANK
+            , SH_MART
+            , SH_PARMACY
+            , SH_SUBWAY
+            , SH_CAFE
+            , SH_STORE
+            , SH_STATUS
+            , SH_DATE
+            , HST_NO
+	FROM SH_INFO
+	WHERE SH_NO = ?
+	</entry>
+	<!-- 수정하기 포토  select -->
+	<entry key="selectUpdatePhoto">
+	SELECT 
+			  SH_INAME
+            , SH_IPATH
+            , SH_ITYPE
+            , SH_NO
+            , SH_CHNAME
+	FROM SH_PHOTO
+	WHERE SH_NO = ?
+	</entry>
+	<!-- 수정하기 룸 select -->
+	<entry key="selectUpdateRoom">
+	SELECT
+			  SH_RNO
+			, SH_RTYPE
+			, SH_GENDER
+			, SH_RAREA
+			, SH_DEPOSIT
+			, SH_ADMCOST
+			, SH_MONTHLY
+			, SH_RDATE
+			, SH_CAPACITY
+			, SH_RNAME
+			, SH_NO
+	FROM SH_ROOM
+	WHERE SH_NO = ?
+	</entry>
+	<!-- 여기서부터 시작 -->
+	<!-- 수정 Info -->
+	<entry key="updateInfo">
+	UPDATE 
+			 SH_INFO
+		SET  
+			SH_TITLE = ?
+		  , SH_TYPE = ?
+		  , SH_STR = ?
+		  , SH_AREA = ?
+		  , SH_FLOOR = ?
+		  , SH_INTRO = ?
+		  , SH_PERS = ?
+		  , SH_COMS = ?
+		  , SH_SS = ?
+		  , SH_ADDRESS = ?
+		  , SH_LA = ?
+		  , SH_LO= ?
+		  , SH_BANK = ?
+		  , SH_MART = ?
+		  , SH_PARMACY = ?
+		  , SH_SUBWAY = ?
+		  , SH_CAFE = ?
+		  , SH_STORE = ?
+          , HST_NO = ?
+	WHERE
+		  SH_NO = ?	 
+	</entry>
+	<!-- 수정 Room -->
+	<entry key="updateRoom">
+	UPDATE
+			SH_ROOM
+	   SET 
+	   		   SH_RTYPE = ?
+            , SH_GENDER = ?
+            , SH_RAREA = ?
+            , SH_DEPOSIT = ?
+            , SH_ADMCOST = ?
+            , SH_MONTHLY = ?
+            , SH_RDATE = ?
+            , SH_CAPACITY = ?
+            , SH_RNAME = ?	
+	WHERE 
+		 	SH_NO = ?
+	</entry>
+	<!-- 수정 photo -->
+	<entry key="updateInsertPhoto">			
+	INSERT 
+		INTO SH_PHOTO
+		(   
+			  SH_I
+			, SH_INAME
+			, SH_IPATH
+			, SH_NO
+			, SH_ITYPE
+			, SH_CHNAME
+		
+		)VALUES(
+			  'SHIMG' || SHIMG.nextval
+			, ?
+			, ?
+			, ?
+			, ?
+			, ?
+		)
+	</entry>
+	<entry key="updateDeletePhoto">
+	DELETE 
+	FROM SH_PHOTO
+	WHERE 
+			SH_NO = ?
+	</entry>
+	<!--페이징 처리 된 Host 매물 내역 조회  -->  
+	<entry key="selectInfoPaging">
+	SELECT   RNUM
+            , SH_NO
+            , SH_TITLE
+            , SH_TYPE
+            , SH_STR
+            , SH_AREA
+            , SH_ADDRESS
+            , SH_DATE
+            , HST_NO
+	FROM (SELECT ROWNUM RNUM, SH.*
+	    FROM(SELECT 
+	              SH_NO
+	            , SH_TITLE
+	            , SH_TYPE
+	            , SH_STR
+	            , SH_AREA
+	            , SH_ADDRESS
+	            , SH_DATE
+	            , HST_NO
+		FROM
+	            SH_INFO
+		WHERE
+	            SH_STATUS = 'Y'
+	    AND HST_NO = ?
+	    ORDER BY SH_DATE DESC) SH)
+	WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	<entry key="HouseConfirmListCount">
+	SELECT
+            COUNT(*)
+        FROM
+              SH_INFO
+       WHERE HST_NO = ?
+	</entry>
+	
+	
+	
+	<!-- SH -->
+	<!-- 임대인 결제 insert -->
+	<entry key="insertHstpay">
+	INSERT
+		INTO SH_PAY
+		(
+			SHP_NO
+		,	SH_ITEM
+		,	SH_PRICE
+		,	SH_PDATE
+		,	HST_NO		
+		)
+		VALUES
+		(
+			'SHP' || SHP.nextval
+		,	?
+		,	?
+		,	SYSDATE
+		,	?
+		)	
+	</entry>
+	<!-- 하우스 신고 insert -->
+	<entry key="insertHouseReport">
+	INSERT
+		INTO SH_REPORT
+		(
+			SH_REPORTNUM
+		,	SH_REASON
+		,	SH_CONTENT
+		,	SH_REPORT_DATE
+		, 	SH_NO
+		,	US_NO			
+		)
+		VALUES
+		(
+			'SHRP' || SHRP.nextval
+		,	?
+		,	?
+		,	SYSDATE
+		,	?
+		,	?
+		)
+	</entry>
+	
+	<!-- 키워드로만 검색 시 리스트 -->
+   <entry key="selectKeywordList">
+      SELECT
+             SH_NO
+            ,   SH_TITLE
+            ,   SH_TYPE
+            ,   SH_ADDRESS
+            ,   SH_LA
+            ,   SH_LO
+            ,   SH_SUBWAY
+            ,   SH_STATUS    
+            ,   SH_I
+            ,   SH_ITYPE
+            ,   SH_IPATH
+            ,   SH_CHNAME
+        FROM
+               SH_INFO
+       JOIN    SH_PHOTO USING(SH_NO)       
+        WHERE
+             SH_STATUS = 'Y'
+          AND   SH_ITYPE = 'T'
+          AND    (SH_SUBWAY LIKE '%' || ? || '%' OR SH_ADDRESS LIKE '%' || ? || '%')         
+     ORDER BY
+              SH_DATE DESC
+   </entry>
+	
+	<!-- 신고하려는 하우스 리스트정보 -->
+	<entry key="selectReportHouse">
+	SELECT
+              SH_NO 
+        ,     SH_TITLE
+        ,     SH_TYPE
+        ,     SH_ADDRESS
+        ,     SH_DATE
+        ,     SH_STR
+        ,     HST_NAME
+        ,     HST_PHONE
+        ,     SH_IPATH
+        ,     SH_ITYPE
+        ,     SH_CHNAME
+	FROM    
+			  SH_INFO
+		JOIN  HST_DB USING(HST_NO)
+		JOIN  SH_PHOTO USING(SH_NO)
+		WHERE 
+			  SH_NO = ?
+		AND   SH_ITYPE = 'T'
+	</entry>
+	<!-- 예약하려는 하우스 리스트 정보 -->
+	<entry key="selectReservationHouse">
+	SELECT
+              SH_NO 
+        ,     SH_TITLE
+        ,     SH_TYPE
+        ,     SH_ADDRESS
+        ,     SH_DATE
+        ,     SH_STR
+        ,     HST_NAME
+        ,     HST_PHONE
+        ,     SH_IPATH
+        ,     SH_ITYPE
+        ,     SH_CHNAME
+	FROM    
+			  SH_INFO
+		JOIN  HST_DB USING(HST_NO)
+		JOIN  SH_PHOTO USING(SH_NO)
+		WHERE 
+			  SH_NO = ?
+		AND   SH_ITYPE = 'T'
+	</entry>
+	<!-- 예약하려는 하우스 방 리스트 정보 -->
+	<entry key="selectReservationRoom">
+		SELECT
+				  SH_RNO
+				, SH_RTYPE
+				, SH_GENDER
+				, SH_RAREA
+				, SH_DEPOSIT
+				, SH_ADMCOST
+				, SH_MONTHLY
+				, SH_RDATE
+				, SH_CAPACITY
+				, SH_RNAME
+				, SH_NO
+		FROM 
+				SH_ROOM
+		WHERE SH_NO = ?
+		</entry>
+		<!-- 예약 insert -->
+		<entry key="insertHouseReservation">
+		INSERT
+				INTO SH_RES
+				(
+				 	SH_RVNO
+				 ,	SH_RV_CHKRM
+				 ,	SH_RV_PERIOD
+				 ,	SH_RV_DATE
+				 ,	US_NO
+				 ,	SH_NO
+				 ,  SH_RV_STATUS
+				 ,  SH_RV_TD
+				)
+				VALUES
+				(
+					'SHRV' || SHRV.nextval
+				,	?
+				,	?
+				,	?
+				,	?
+				,	?
+				,  'Y'
+				,  SYSDATE
+				)
+		</entry>
+    	<!-- 네비바 하우스 버튼  -->
+		 <entry key="selectMainHouse">
+		 SELECT 
+		            ROWNUM
+		          , SH_NO
+		          , SH_TITLE
+		          , SH_INTRO
+		          , SH_STATUS
+		          , SH_IPATH
+		          , SH_ITYPE
+		          , SH_CHNAME
+		FROM(SELECT 
+		                    SH_NO
+		                   , SH_TITLE
+		                   , SH_INTRO
+		                   , SH_STATUS
+		                   , SH_IPATH
+		                   , SH_ITYPE
+		                   , SH_CHNAME
+		         FROM 
+		                    SH_INFO
+		     LEFT JOIN SH_PHOTO USING(SH_NO)
+		     ORDER BY SH_DATE DESC)
+		WHERE SH_ITYPE= 'T'
+		AND SH_STATUS = 'Y'
+		AND ROWNUM <![CDATA[ <= ]]> 12
+		 
+		 </entry>  
+    
+</properties>

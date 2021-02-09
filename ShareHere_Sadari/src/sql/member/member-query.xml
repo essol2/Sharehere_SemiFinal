@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="loginMember">
+		 SELECT
+			  US_NO
+			, US_ID
+			, US_PWD
+			, US_NAME
+			, US_BIRTH
+			, US_GENDER
+			, US_EMAIL
+			, US_PHONE
+			, US_ACT
+			, US_STOP
+		 FROM
+		 	  USER_DB
+		WHERE
+			  US_ID = ?
+		  AND US_PWD = ?
+		  AND US_ACT = 'Y' 
+	</entry>
+	<entry key="loginHMember">
+		SELECT
+			  HST_NO
+			, HST_ID
+			, HST_PWD
+			, HST_NAME
+			, HST_BIRTH
+			, HST_GENDER
+			, HST_EMAIL
+			, HST_PHONE
+			, HST_BSNO
+			, HST_BSNAME
+			, HST_ACT
+			, HST_STOP
+		 FROM
+		 	  HST_DB
+		WHERE
+			  HST_ID = ?
+		  AND HST_PWD = ?
+		  AND HST_ACT = 'Y' 
+	</entry>
+	<entry key="loginAMember">
+		SELECT
+			  ADM_NUM
+			, ADM_ID
+			, ADM_PWD
+			, ADM_DEPART
+		 FROM
+		 	  ADM_ADMIN
+		WHERE
+			  ADM_ID = ?
+		  AND ADM_PWD = ?
+	</entry>
+	<entry key="insertMember">
+		INSERT
+		INTO USER_DB
+		(
+			  US_NO
+		    , US_ID
+		    , US_PWD
+		    , US_NAME
+		    , US_BIRTH
+		    , US_GENDER
+  		    , US_EMAIL
+  		    , US_PHONE
+	  	    , US_ACT
+		)
+		VALUES
+		(
+			'u' || USER_NO.NEXTVAL
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , 'Y'
+		)
+	</entry>
+	<entry key="insertHMember">
+		INSERT
+		INTO HST_DB
+		(
+			  HST_NO
+		    , HST_ID
+		    , HST_PWD
+		    , HST_NAME
+		    , HST_BIRTH
+		    , HST_GENDER
+  		    , HST_EMAIL
+  		    , HST_PHONE
+  		    , HST_BSNO
+  		    , HST_BSNAME
+	  	    , HST_ACT
+		)
+		VALUES
+		(
+			'h' || HOST_NO.NEXTVAL
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , ?
+		  , 'Y'
+		)
+	</entry>
+	<entry key="updateMember">
+		UPDATE
+			USER_DB
+		SET
+			US_NAME = ?
+		  , US_EMAIL = ?
+		  , US_PHONE = ?
+		WHERE
+			US_ID = ?
+	</entry>
+	<entry key="updateHMember">
+		UPDATE
+			HST_DB
+		SET
+			HST_NAME = ?
+		  , HST_EMAIL = ?
+		  , HST_PHONE = ?
+		WHERE
+			HST_ID = ?
+	</entry>
+	<entry key="selectMember">
+		SELECT
+			  US_NO
+			, US_ID
+			, US_PWD
+			, US_NAME
+			, US_BIRTH
+			, US_GENDER
+			, US_EMAIL
+			, US_PHONE
+			, US_ACT
+			, US_STOP
+		 FROM
+		 	  USER_DB
+		WHERE
+			  US_ID = ?
+		  AND US_ACT = 'Y' 
+	</entry>
+	<entry key="selectHMember">
+		SELECT
+			  HST_NO
+			, HST_ID
+			, HST_PWD
+			, HST_NAME
+			, HST_BIRTH
+			, HST_GENDER
+			, HST_EMAIL
+			, HST_PHONE
+			, HST_BSNO
+			, HST_BSNAME
+			, HST_ACT
+			, HST_STOP
+		 FROM
+		 	  HST_DB
+		WHERE
+			  HST_ID = ?
+		  AND HST_ACT = 'Y' 
+	</entry>
+	<entry key="idCheck1">
+		 SELECT
+				COUNT(*)
+		   FROM
+		   		USER_DB
+		  WHERE
+		  		US_ID = ?
+	</entry>
+	<entry key="idCheck2">
+		 SELECT
+				COUNT(*)
+		   FROM
+		   		HST_DB
+		  WHERE
+		  		HST_ID = ?
+	</entry>
+	<entry key="deleteMember">
+		UPDATE
+				USER_DB
+		   SET
+		   		US_ACT = 'N'
+		   	  , US_STOP = SYSDATE
+		 WHERE	
+		 		US_ID = ?
+	</entry>
+	<entry key="deleteHMember">
+		UPDATE
+				HST_DB
+		   SET
+		   		HST_ACT = 'N'
+		   	  , HST_STOP = SYSDATE
+		 WHERE	
+		 		HST_ID = ?
+	</entry>
+	<entry key="updatePwd">
+		UPDATE
+			   USER_DB
+		   SET 
+		   	   US_PWD = ?
+		 WHERE US_ID = ?
+		   AND US_PWD = ?
+		
+	</entry>
+	<entry key="updateHPwd">
+		UPDATE
+			   HST_DB
+		   SET 
+		   	   HST_PWD = ?
+		 WHERE HST_ID = ?
+		   AND HST_PWD = ?
+	</entry>
+	<entry key="findUserId">
+		SELECT
+				US_ID
+		  FROM
+		  		USER_DB
+		 WHERE	US_NAME = ?
+		   AND	US_PHONE = ?
+	</entry>
+	<entry key="findHostId">
+		SELECT
+				HST_ID
+		  FROM
+		  		HST_DB
+		 WHERE	HST_NAME = ?
+		   AND	HST_PHONE = ?
+	</entry>
+	<entry key="selectPwdMember">
+		SELECT
+			  US_NO
+			, US_ID
+			, US_PWD
+			, US_NAME
+			, US_BIRTH
+			, US_GENDER
+			, US_EMAIL
+			, US_PHONE
+			, US_ACT
+			, US_STOP
+		 FROM
+		 	  USER_DB
+		WHERE
+			  US_ID = ?
+		  AND US_EMAIL = ?
+		  AND US_PHONE = ?
+		  AND US_ACT = 'Y' 
+	</entry>
+	<entry key="selectPwdHMember">
+				SELECT
+			  HST_NO
+			, HST_ID
+			, HST_PWD
+			, HST_NAME
+			, HST_BIRTH
+			, HST_GENDER
+			, HST_EMAIL
+			, HST_PHONE
+			, HST_BSNO
+			, HST_BSNAME
+			, HST_ACT
+			, HST_STOP
+		 FROM
+		 	  HST_DB
+		WHERE
+			  HST_ID = ?
+		  AND HST_EMAIL = ?
+		  AND HST_PHONE = ?
+		  AND HST_ACT = 'Y' 
+	</entry>
+	
+</properties>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
