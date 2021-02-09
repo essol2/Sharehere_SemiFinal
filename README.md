@@ -129,5 +129,10 @@ Here is who we are.
 
 <br>
 
-### MainPage of ShareHere
+### View of ShareHere
+• MainPage<br>
 ![이미지 2](https://user-images.githubusercontent.com/73922496/107419451-2c0a4a80-6b5b-11eb-90d7-5b0ce7e6faf6.GIF)
+<br>
+• Login & Register<br>
+![이미지 3](https://user-images.githubusercontent.com/73922496/107420199-fb76e080-6b5b-11eb-996d-3d1268eaaf87.GIF)
+<br>
