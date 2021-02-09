@@ -115,3 +115,6 @@ Here is who we are.
 <br>
 
 ### Using Langages and Tools
+| Java & Survlet/JSP | HTML/CSS & Javascript/JQuery | SQL |
+| ------ | ------ | ------ |
+| Eclipse | VSCode | Oracle |
