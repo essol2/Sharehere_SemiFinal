@@ -128,4 +128,5 @@ Here is who we are.
 • Chart.js <br>
 
 <br>
-
+### MainPage of ShareHere
+![이미지 2](https://user-images.githubusercontent.com/73922496/107419451-2c0a4a80-6b5b-11eb-90d7-5b0ce7e6faf6.GIF)
