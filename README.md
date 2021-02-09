@@ -115,6 +115,16 @@ Here is who we are.
 <br>
 
 ### Using Langages and Tools
-| Java & Survlet/JSP | HTML/CSS & Javascript/JQuery | SQL |
-| ------ | ------ | ------ |
-| Eclipse | VSCode | Oracle |
+| Java & Survlet/JSP | HTML/CSS & Javascript/JQuery | SQL | Server |
+| ------ | ------ | ------ | ------ |
+| Eclipse | VSCode | Oracle | Apatch Tomcat 8.5 | 
+
+<br>
+### Using APIs
+
+• KakaoMap API
+• Import Payment API
+• Chart.js
+
+<br>
+
