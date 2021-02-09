@@ -120,11 +120,12 @@ Here is who we are.
 | Eclipse | VSCode | Oracle | Apatch Tomcat 8.5 | 
 
 <br>
+
 ### Using APIs
 
-• KakaoMap API
-• Import Payment API
-• Chart.js
+• KakaoMap API <br>
+• Import Payment API <br>
+• Chart.js <br>
 
 <br>
 
