@@ -157,7 +157,7 @@ Here is who we are.
 https://www.figma.com/file/LO0UJ40pGjXenoeAZpXAeR/ShareHere?node-id=0%3A817
 
 • DB
-https://www.erdcloud.com/d/wKnqATKYPJATcuWMt
+![ShareHere (3)](https://user-images.githubusercontent.com/73922496/107479473-7c66c400-6bbe-11eb-9a57-e0b9f1e22d66.png)
 
 • Code
 https://docs.google.com/presentation/d/1b0AA1Gj_-13XxeoZlnqifWxYNmZN2RnLnjDt6lAXYms/edit?usp=sharing
