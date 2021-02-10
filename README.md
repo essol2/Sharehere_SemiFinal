@@ -150,14 +150,14 @@ Here is who we are.
 -------------------------------------------------------------------------------------------------------------------------------
 
 ### Building
-• Plan
+• Plan<br>
 [사다리_계획발표PPT.pdf](https://github.com/essol2/Sharehere_SemiFinal/files/5956508/_.PPT.pdf)
 
-• UI
+• UI<br>
 https://www.figma.com/file/LO0UJ40pGjXenoeAZpXAeR/ShareHere?node-id=0%3A817
 
-• DB
+• DB<br>
 ![ShareHere (3)](https://user-images.githubusercontent.com/73922496/107479473-7c66c400-6bbe-11eb-9a57-e0b9f1e22d66.png)
 
-• Final Presentaion
+• Final Presentaion<br>
 [ShareHere_최종발표.pdf](https://github.com/essol2/Sharehere_SemiFinal/files/5956522/ShareHere_.pdf)
