@@ -149,14 +149,15 @@ Here is who we are.
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-### Plan(기획서)
-https://drive.google.com/file/d/1V_6gKy7cZNQRqGbEiAHrAoO1yhdwpkoK/view?usp=sharing
+### Building
+• Plan
+[사다리_계획발표PPT.pdf](https://github.com/essol2/Sharehere_SemiFinal/files/5956508/_.PPT.pdf)
 
-### UI 설계
-https://docs.google.com/presentation/d/1z7FkE6KpjXODLDRpl3Sko_ybOLEyjJh63aXz-anzlfo/edit?usp=sharing
+• UI
+https://www.figma.com/file/LO0UJ40pGjXenoeAZpXAeR/ShareHere?node-id=0%3A817
 
-### DB설계
+• DB
 https://www.erdcloud.com/d/wKnqATKYPJATcuWMt
 
-### 코드 작성
+• Code
 https://docs.google.com/presentation/d/1b0AA1Gj_-13XxeoZlnqifWxYNmZN2RnLnjDt6lAXYms/edit?usp=sharing
