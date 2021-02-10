@@ -13,6 +13,10 @@
 
 
 <br>
+### Plan(기획서)
+https://drive.google.com/file/d/1V_6gKy7cZNQRqGbEiAHrAoO1yhdwpkoK/view?usp=sharing
+
+<br>
 
 ### Functions 
 ```
@@ -114,19 +118,16 @@ Here is who we are.
 
 <br>
 
-### Using Langages and Tools
-| Java & Survlet/JSP | HTML/CSS & Javascript/JQuery | SQL | Server |
-| ------ | ------ | ------ | ------ |
-| Eclipse | VSCode | Oracle | Apatch Tomcat 8.5 | 
+### Using Langages, Tools and APIs
+| OS         | Window 10, Mac |
+| ---------- | ------------- |
+| Language      | HTML, CSS, Javascript, Java  |
+| RDBMS      | Oracle 11g  |
+| JDK     | Java 1.8, servlet, JSP  |
+| IDE        | Eclipse, Visual Studio Code, SQL Developer  |
+| Library       | Bootstrap, Jquery, AJAX, servlet, JSP, cos.jar, activation.jar, json-simple-1.1.1.jar, mail.jar, ojdbc6.jar |
+| API       |  KakaoMap, Import Payment, Chart.js  |
 
-<br>
-
-### Using APIs
-```
-• KakaoMap API <br>
-• Import Payment API <br>
-• Chart.js <br>
-```
 <br>
 
 ### View of ShareHere
