@@ -163,10 +163,7 @@ https://www.figma.com/file/LO0UJ40pGjXenoeAZpXAeR/ShareHere?node-id=0%3A817
 • Final Presentaion (with Main code reviews)<br>
 example
 |<img width="1379" alt="스크린샷 2021-02-10 오후 4 54 23" src="https://user-images.githubusercontent.com/73922496/107481250-3c551080-6bc1-11eb-9949-9fae49af8849.png">|<img width="1381" alt="스크린샷 2021-02-10 오후 4 55 12" src="https://user-images.githubusercontent.com/73922496/107481268-424af180-6bc1-11eb-9099-6e62605122ed.png">|
-
 |<img width="1381" alt="스크린샷 2021-02-10 오후 4 55 44" src="https://user-images.githubusercontent.com/73922496/107481272-4414b500-6bc1-11eb-998b-f2545ad35aea.png">|<img width="1377" alt="스크린샷 2021-02-10 오후 4 56 04" src="https://user-images.githubusercontent.com/73922496/107481282-470fa580-6bc1-11eb-8f02-ca753258acf4.png">|
-
 |<img width="1378" alt="스크린샷 2021-02-10 오후 4 56 22" src="https://user-images.githubusercontent.com/73922496/107481292-48d96900-6bc1-11eb-89ac-7e86bef8a88b.png">|<img width="1380" alt="스크린샷 2021-02-10 오후 4 56 40" src="https://user-images.githubusercontent.com/73922496/107481299-4aa32c80-6bc1-11eb-8927-b51d0f4af98a.png">|
-
 |<img width="1378" alt="스크린샷 2021-02-10 오후 4 56 55" src="https://user-images.githubusercontent.com/73922496/107481305-4bd45980-6bc1-11eb-9d05-85f847f3d268.png">|<img width="1378" alt="스크린샷 2021-02-10 오후 4 57 45" src="https://user-images.githubusercontent.com/73922496/107481312-4d9e1d00-6bc1-11eb-9e14-42669815f7ea.png">|
 [ShareHere_최종발표.pdf](https://github.com/essol2/Sharehere_SemiFinal/files/5956522/ShareHere_.pdf)
