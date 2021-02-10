@@ -120,7 +120,7 @@ Here is who we are.
 | ---------- | ------------- |
 | Language      | HTML, CSS, Javascript, Java  |
 | RDBMS      | Oracle 11g  |
-| JDK     | Java 1.8, servlet, JSP  |
+| JDK     | Java 1.8, Java 11, servlet, JSP  |
 | IDE        | Eclipse, Visual Studio Code, SQL Developer  |
 | Library       | Bootstrap, Jquery, AJAX, servlet, JSP, cos.jar, activation.jar, json-simple-1.1.1.jar, mail.jar, ojdbc6.jar |
 | API       |  KakaoMap, Import Payment, Chart.js  |
