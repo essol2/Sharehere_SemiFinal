@@ -11,11 +11,6 @@
    
 > 🏡ShareHere, which was created to share the housing concerns of young people who are advancing for their dreams, has a HOUSE function to find a share house that is suitable for me to the owners of the share house, and to the young people who are looking for a share house. With the ROOMMATE function that finds a roommate that fits you well among all kinds of people, we want to listen to the concerns of various users at the forefront.  
 
-
-<br>
-### Plan(기획서)
-https://drive.google.com/file/d/1V_6gKy7cZNQRqGbEiAHrAoO1yhdwpkoK/view?usp=sharing
-
 <br>
 
 ### Functions 
@@ -32,6 +27,8 @@ https://drive.google.com/file/d/1V_6gKy7cZNQRqGbEiAHrAoO1yhdwpkoK/view?usp=shari
   • 👫 Roommate : Understanding user's disposition through survey, Recommend roommate, Chat, Payment  
   • 📋 Mypage : Checking services (viewing reservation, roommate, payment), Withdrawal  
   • 📈 Administrator : Managing services (members, share houses, reports, income)  
+
+
 
 <br>
 
@@ -149,3 +146,16 @@ Here is who we are.
 |------|------|
 |• Administrator Page | • About Us |
 |------|------|
+
+
+### Plan(기획서)
+https://drive.google.com/file/d/1V_6gKy7cZNQRqGbEiAHrAoO1yhdwpkoK/view?usp=sharing
+
+### UI 설계
+https://docs.google.com/presentation/d/1z7FkE6KpjXODLDRpl3Sko_ybOLEyjJh63aXz-anzlfo/edit?usp=sharing
+
+### DB설계
+https://www.erdcloud.com/d/wKnqATKYPJATcuWMt
+
+### 코드 작성
+https://docs.google.com/presentation/d/1b0AA1Gj_-13XxeoZlnqifWxYNmZN2RnLnjDt6lAXYms/edit?usp=sharing
