@@ -160,8 +160,8 @@ Here is who we are.
       <td><img width="1434" alt="스크린샷 2021-02-10 오후 5 10 01" src="https://user-images.githubusercontent.com/73922496/107482346-e719fe80-6bc2-11eb-902f-af38211c50f2.png"></td>
    <td><img width="1440" alt="스크린샷 2021-02-10 오후 5 10 32" src="https://user-images.githubusercontent.com/73922496/107482367-ed0fdf80-6bc2-11eb-8996-17c4b6900e86.png"></td>
    </tr>
- </talbe>
-https://www.figma.com/file/LO0UJ40pGjXenoeAZpXAeR/ShareHere?node-id=0%3A817 -> for more UI
+ </table>
+https://www.figma.com/file/LO0UJ40pGjXenoeAZpXAeR/ShareHere?node-id=0%3A817 -> for more UI building
 
 • DB<br>
 ![ShareHere (3)](https://user-images.githubusercontent.com/73922496/107479473-7c66c400-6bbe-11eb-9a57-e0b9f1e22d66.png)<br>
