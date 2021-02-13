@@ -132,8 +132,8 @@ Here is who we are.
 |------|------|
 |![이미지 2](https://user-images.githubusercontent.com/73922496/107419451-2c0a4a80-6b5b-11eb-90d7-5b0ce7e6faf6.GIF)|![이미지 3](https://user-images.githubusercontent.com/73922496/107420199-fb76e080-6b5b-11eb-996d-3d1268eaaf87.GIF)|
 |------|------|
-|• House_Search |• House_Booking |
-|------|------|
+|• House_Search |• House_SearchDetail |
+|![search](https://user-images.githubusercontent.com/59958929/107848970-53069c00-6e3b-11eb-9c95-9240be7f470e.gif)|------|
 |• House_Report |• House_Checking Reservation|
 |------|-----|
 |• House_Upload |• Houes_UpdateInfo|
