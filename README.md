@@ -150,7 +150,7 @@ Here is who we are.
 |• Roommate_myPage | • Roommate_Board |
 |------|------|
 |• Administrator Page | • About Us |
-|------|------|
+|------|![aboutUs](https://user-images.githubusercontent.com/59958929/107851251-e516a080-6e4b-11eb-983a-d0f17baca58f.gif)|
 <br>
 
 -------------------------------------------------------------------------------------------------------------------------------
