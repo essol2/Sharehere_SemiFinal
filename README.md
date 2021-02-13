@@ -131,15 +131,18 @@ Here is who we are.
 |• MainPage|• Login & Register|
 |------|------|
 |![이미지 2](https://user-images.githubusercontent.com/73922496/107419451-2c0a4a80-6b5b-11eb-90d7-5b0ce7e6faf6.GIF)|![이미지 3](https://user-images.githubusercontent.com/73922496/107420199-fb76e080-6b5b-11eb-996d-3d1268eaaf87.GIF)|
-|------|------|
+|• findID |• findPwd |
+|![findId](https://user-images.githubusercontent.com/59958929/107850252-5ce0cd00-6e44-11eb-8abc-ec748afc2103.gif)|![findPwd](https://user-images.githubusercontent.com/59958929/107850249-57838280-6e44-11eb-9603-5cf9bf7414d5.gif)|
+|• Mypage Update | • MyPage secession |
+|![mypage_update](https://user-images.githubusercontent.com/59958929/107850572-af22ed80-6e46-11eb-8c12-e8d69b2489f0.gif)|![mp_remove](https://user-images.githubusercontent.com/59958929/107850569-ab8f6680-6e46-11eb-8725-e46fe380f9d7.gif)|
 |• House_Search |• House_SearchDetail |
 |![search](https://user-images.githubusercontent.com/59958929/107848970-53069c00-6e3b-11eb-9c95-9240be7f470e.gif)|![search_detail (1)](https://user-images.githubusercontent.com/59958929/107849160-bc3adf00-6e3c-11eb-8055-c2ff421ecf6a.gif)|
-|• House_Report |• House_Checking Reservation|
-|![house_report](https://user-images.githubusercontent.com/59958929/107849258-6b77b600-6e3d-11eb-941a-7e73658fd11c.gif)|![house_reserva](https://user-images.githubusercontent.com/59958929/107849261-6f0b3d00-6e3d-11eb-882b-7a6e362e3874.gif)|
+|• House_Report |• House_Reservation|
+|![house_report](https://user-images.githubusercontent.com/59958929/107849258-6b77b600-6e3d-11eb-941a-7e73658fd11c.gif)|![house_reser](https://user-images.githubusercontent.com/59958929/107851074-7553e600-6e4a-11eb-966d-44f2b516282d.gif)|
 |• House_hstPayment |• Houes_hstInfo |
-|------|------|
+|![hst_payment](https://user-images.githubusercontent.com/59958929/107849633-e215b300-6e3f-11eb-9c46-0b9fdacac6bd.gif)|![hst_info](https://user-images.githubusercontent.com/59958929/107849631-dd50ff00-6e3f-11eb-92b1-bc8bfce90b6e.gif)|
 |• House_hstInfoUpdate |• Houes_hstInfoDelete |
-|------|------|
+|![hst_update](https://user-images.githubusercontent.com/59958929/107849748-b47d3980-6e40-11eb-9f4b-e09f62156c90.gif)|![hst_delete](https://user-images.githubusercontent.com/59958929/107849744-b0511c00-6e40-11eb-9d96-378b40783234.gif)|
 |• Roommate_Main |• Roommate_Survey|
 |------|------|
 |• Roommate_Result | • Roommate_profile |
