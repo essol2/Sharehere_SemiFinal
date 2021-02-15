@@ -144,7 +144,8 @@ Here is who we are.
 |• House_hstInfoUpdate |• Houes_hstInfoDelete |
 |![hst_update](https://user-images.githubusercontent.com/59958929/107849748-b47d3980-6e40-11eb-9f4b-e09f62156c90.gif)|![hst_delete](https://user-images.githubusercontent.com/59958929/107849744-b0511c00-6e40-11eb-9d96-378b40783234.gif)|
 |• Roommate_Main |• Roommate_Survey|
-|------|------|
+|![Roommate](https://user-images.githubusercontent.com/73922496/107953341-5c7c3980-6fde-11eb-901e-823470763955.gif)
+|------|
 |• Roommate_Result | • Roommate_profile |
 |------|------|
 |• Roommate_myPage | • Roommate_Board |
