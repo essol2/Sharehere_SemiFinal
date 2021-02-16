@@ -147,6 +147,8 @@ Here is who we are.
 |![Roommate](https://user-images.githubusercontent.com/73922496/107953341-5c7c3980-6fde-11eb-901e-823470763955.gif)|![rm_survey](https://user-images.githubusercontent.com/73922496/108023312-9cd2ca80-7065-11eb-9519-4e976d022aba.gif)|
 |• Roommate_Result | • Roommate_profile |
 |![rm_result](https://user-images.githubusercontent.com/73922496/108023300-95abbc80-7065-11eb-9546-413b0b746332.gif)|![rm_profile](https://user-images.githubusercontent.com/73922496/108023285-8e84ae80-7065-11eb-9ae3-120bd22c4123.gif)|
+| Roommate_keep | Roommate_match|
+|![rm_keep](https://user-images.githubusercontent.com/73922496/108023635-4d40ce80-7066-11eb-9e88-5cd75eaabfe2.gif)|![rm_match](https://user-images.githubusercontent.com/73922496/108023652-56ca3680-7066-11eb-8f84-716d57c29ce3.gif)|
 |• Roommate_report | • Roommate_Board |
 |![rm_report](https://user-images.githubusercontent.com/73922496/108023296-947a8f80-7065-11eb-9830-da65b2342100.gif)|![rm_board](https://user-images.githubusercontent.com/73922496/108023238-7a40b180-7065-11eb-80a4-f8b97d309d6d.gif)|
 | Roommate_pay | Roommate_reply|
