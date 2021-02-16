@@ -147,17 +147,18 @@ Here is who we are.
 |![Roommate](https://user-images.githubusercontent.com/73922496/107953341-5c7c3980-6fde-11eb-901e-823470763955.gif)|![rm_survey](https://user-images.githubusercontent.com/73922496/108023312-9cd2ca80-7065-11eb-9519-4e976d022aba.gif)|
 |• Roommate_Result | • Roommate_profile |
 |![rm_result](https://user-images.githubusercontent.com/73922496/108023300-95abbc80-7065-11eb-9546-413b0b746332.gif)|![rm_profile](https://user-images.githubusercontent.com/73922496/108023285-8e84ae80-7065-11eb-9ae3-120bd22c4123.gif)|
-| Roommate_keep | Roommate_match|
+|• Roommate_keep |• Roommate_match|
 |![rm_keep](https://user-images.githubusercontent.com/73922496/108023635-4d40ce80-7066-11eb-9e88-5cd75eaabfe2.gif)|![rm_match](https://user-images.githubusercontent.com/73922496/108023652-56ca3680-7066-11eb-8f84-716d57c29ce3.gif)|
 |• Roommate_report |• Roommate_Pay |
 |![rm_report](https://user-images.githubusercontent.com/73922496/108023296-947a8f80-7065-11eb-9830-da65b2342100.gif)|![rm_pay](https://user-images.githubusercontent.com/73922496/108023281-8cbaeb00-7065-11eb-997b-b944bf466a1a.gif)|
 |• Roommate_Board |• Roommate_reply|
 |![rm_board](https://user-images.githubusercontent.com/73922496/108023238-7a40b180-7065-11eb-80a4-f8b97d309d6d.gif)|![rm_reply](https://user-images.githubusercontent.com/73922496/108023290-904e7200-7065-11eb-822b-6493ca3c96f0.gif)|
-|• Administrator_Main |• Administrator_Member|
-|![이미지 4](https://user-images.githubusercontent.com/73922496/108026149-2638cb80-706b-11eb-8836-aef18d0491a8.GIF)|---|
-|• Administrator_shareHouse|• Administrator_Income|
-|![이미지 5](https://user-images.githubusercontent.com/73922496/108026198-3781d800-706b-11eb-850b-1bfbb66e7e53.GIF)|![이미지 7](https://user-images.githubusercontent.com/73922496/108026231-4b2d3e80-706b-11eb-9694-f83c028b59a4.GIF)|
-|• About Us | ![aboutUs](https://user-images.githubusercontent.com/59958929/107851251-e516a080-6e4b-11eb-983a-d0f17baca58f.gif)|
+|• Administrator_Main |• Administrator_Member1|
+|![이미지 4](https://user-images.githubusercontent.com/73922496/108026149-2638cb80-706b-11eb-8836-aef18d0491a8.GIF)|![admin_1](https://user-images.githubusercontent.com/73922496/108026859-8b40f100-706c-11eb-9169-87f3fed788c9.GIF)|
+|• Administrator_Member2|• Administrator_shareHouse|
+|![admin_2](https://user-images.githubusercontent.com/73922496/108026904-9e53c100-706c-11eb-9f97-83555aef4b74.GIF)|![이미지 5](https://user-images.githubusercontent.com/73922496/108026198-3781d800-706b-11eb-850b-1bfbb66e7e53.GIF)|
+|• Administrator_Income|• About Us |
+|![이미지 7](https://user-images.githubusercontent.com/73922496/108026231-4b2d3e80-706b-11eb-9694-f83c028b59a4.GIF)|![aboutUs](https://user-images.githubusercontent.com/59958929/107851251-e516a080-6e4b-11eb-983a-d0f17baca58f.gif)|
 <br>
 
 -------------------------------------------------------------------------------------------------------------------------------
