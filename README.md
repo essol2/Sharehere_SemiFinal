@@ -144,12 +144,13 @@ Here is who we are.
 |• House_hstInfoUpdate |• Houes_hstInfoDelete |
 |![hst_update](https://user-images.githubusercontent.com/59958929/107849748-b47d3980-6e40-11eb-9f4b-e09f62156c90.gif)|![hst_delete](https://user-images.githubusercontent.com/59958929/107849744-b0511c00-6e40-11eb-9d96-378b40783234.gif)|
 |• Roommate_Main |• Roommate_Survey|
-|![Roommate](https://user-images.githubusercontent.com/73922496/107953341-5c7c3980-6fde-11eb-901e-823470763955.gif)
-|------|
+|![Roommate](https://user-images.githubusercontent.com/73922496/107953341-5c7c3980-6fde-11eb-901e-823470763955.gif)|![rm_survey](https://user-images.githubusercontent.com/73922496/108023312-9cd2ca80-7065-11eb-9519-4e976d022aba.gif)|
 |• Roommate_Result | • Roommate_profile |
-|------|------|
-|• Roommate_myPage | • Roommate_Board |
-|------|------|
+|![rm_result](https://user-images.githubusercontent.com/73922496/108023300-95abbc80-7065-11eb-9546-413b0b746332.gif)|![rm_profile](https://user-images.githubusercontent.com/73922496/108023285-8e84ae80-7065-11eb-9ae3-120bd22c4123.gif)|
+|• Roommate_report | • Roommate_Board |
+|![rm_report](https://user-images.githubusercontent.com/73922496/108023296-947a8f80-7065-11eb-9830-da65b2342100.gif)|![rm_board](https://user-images.githubusercontent.com/73922496/108023238-7a40b180-7065-11eb-80a4-f8b97d309d6d.gif)|
+| Roommate_pay | Roommate_reply|
+|![rm_pay](https://user-images.githubusercontent.com/73922496/108023281-8cbaeb00-7065-11eb-997b-b944bf466a1a.gif) |![rm_reply](https://user-images.githubusercontent.com/73922496/108023290-904e7200-7065-11eb-822b-6493ca3c96f0.gif)|
 |• Administrator Page | • About Us |
 |------|![aboutUs](https://user-images.githubusercontent.com/59958929/107851251-e516a080-6e4b-11eb-983a-d0f17baca58f.gif)|
 <br>
